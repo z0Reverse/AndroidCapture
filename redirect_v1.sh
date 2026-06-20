@@ -1,18 +1,3 @@
-使用方法：
-1、chmod赋予权限
-2、./脚本名字.sh 进程id 转发的ip地址
-	eg: ./test.sh u0_a156 127.0.0.1
-3、只会针对目标app做代理转发，测试完毕记得清楚转发
-	./test.sh -F
-**命令参考：**
-全局所有APP流量转发到电脑192.168.1.5:8080 
-./redirect.sh -A 192.168.1.5 
-仅转发UID=10156的APP流量
-./redirect.sh u0_a156 192.168.1.100
-./redirect.sh 10156 192.168.1.5 
-抓包结束清空所有转发规则
-./redirect.sh -F
-```sh
 #!/system/bin/sh
 # Android iptables 流量透明转发脚本
 # 支持输入数字UID / u0_aXX/u1_aXX用户名自动转换
@@ -178,4 +163,3 @@ main() {
 }
 
 main "$@"
-```
